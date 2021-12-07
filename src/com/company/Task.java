@@ -16,6 +16,11 @@ public class Task {
 
     @Override
     public String toString() {
-        return identify + " [ ] " + description + " " + status;
+        if (status.toString().equals("DONE")){
+            return identify + " [x] " + description + " " + status;
+        }
+        else{
+            return identify + " [ ] " + description + " " + status;
+        }
     }
 }

@@ -8,7 +8,6 @@ class TaskManagerTest {
     @Test
     void parseInputAdd() {
         //Arrange
-        int i;
         String expectedOutput = "Learn Python";
         TaskManager tm = new TaskManager();
         //Act
@@ -16,4 +15,6 @@ class TaskManagerTest {
         //Assert
         assertEquals(expectedOutput, tm.parseInput("+ Learn Python"));
     }
+
+
 }
