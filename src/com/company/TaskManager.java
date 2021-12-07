@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class TaskManager {
 
+    ArrayList<Task> tasks = new ArrayList<>();
+
     public String parseInput(String s){
         String[] array = s.split(" ");
         ArrayList<String> res = new ArrayList<>();
@@ -14,5 +16,13 @@ public class TaskManager {
         }
         res.add(c.toString());
         return res.get(1);
+    }
+
+    public ArrayList<Task> getTaskList(){
+        return this.tasks;
+    }
+
+    public void updateList(ArrayList<Task> expected_task_list) {
+        this.tasks=expected_task_list;
     }
 }
